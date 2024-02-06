@@ -1,0 +1,54 @@
+plugins {
+    id 'java'
+    id('io.qameta.allure') version '2.11.2' // Подключаем allure gradle
+}
+
+group = 'com.zavadimka'
+version = '1.0-SNAPSHOT'
+
+// Подключаем allure gradle
+// В момент нажатия allureServe происходит генерация отчёта
+allure { // используется для построения единообразных отчётов независимо от используемого языка программирования
+    report { // секция репорта
+        version.set("2.25.0") // версию берём из https://github.com/allure-framework/allure2
+    }
+    adapter { // отвечает за появление папки build/allure-results - это результаты автотестов
+        // собирает их из json файла в build/allure-results
+        aspectjWeaver.set(true) // Отвечает за обработку аннотации веб-степов @Step
+        frameworks {
+            junit5 { // название фреймворка
+                adapterVersion.set("2.25.0") // версия интеграции фреймворка в Allure
+            }
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+def junitVersion = "5.10.2",
+    selenideVersion = "6.19.1",
+    slf4jVersion = "2.0.9",
+    allureVersion = "2.25.0"
+
+dependencies {
+    testImplementation(
+            "org.junit.jupiter:junit-jupiter:$junitVersion",
+            "com.codeborne:selenide:$selenideVersion",
+            "org.slf4j:slf4j-simple:$slf4jVersion",
+            "io.qameta.allure:allure-selenide:$allureVersion"
+    )
+}
+
+test {
+    useJUnitPlatform()
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
