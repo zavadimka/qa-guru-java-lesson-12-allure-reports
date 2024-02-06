@@ -1,0 +1,8 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Feb 06 19:37:17 GMT 2024","Tue Feb 06 19:37:17 GMT 2024","2","","Тесты с использованием меток (labels)","","com.zavadimka.LabelsTest","testDynamicLabels","Создание Issue для авторизованного пользователя",""
+"passed","Tue Feb 06 19:37:17 GMT 2024","Tue Feb 06 19:37:21 GMT 2024","3889","","com.zavadimka.SelenideTest","","com.zavadimka.SelenideTest","testIssueSearch","testIssueSearch()",""
+"passed","Tue Feb 06 19:37:13 GMT 2024","Tue Feb 06 19:37:16 GMT 2024","3416","","Проверка прикрепления вложений","","com.zavadimka.AttachmentsTest","testLambdaAttachments","Проверка прикрепления исходного кода страницы",""
+"passed","Tue Feb 06 19:37:23 GMT 2024","Tue Feb 06 19:37:26 GMT 2024","2438","","Тесты с использованием лямба- и веб- степов","","com.zavadimka.StepsTest","testLambdaStep","Тест с лямбда-степами",""
+"passed","Tue Feb 06 19:37:17 GMT 2024","Tue Feb 06 19:37:17 GMT 2024","2","","Тесты с использованием меток (labels)","","com.zavadimka.LabelsTest","testStaticLabels","Создание Issue для авторизованного пользователя",""
+"passed","Tue Feb 06 19:37:21 GMT 2024","Tue Feb 06 19:37:23 GMT 2024","2029","","Тесты с использованием лямба- и веб- степов","","com.zavadimka.StepsTest","testAnnotatedStep","Тест с веб-степами",""
+"passed","Tue Feb 06 19:37:16 GMT 2024","Tue Feb 06 19:37:17 GMT 2024","1170","","Проверка прикрепления вложений","","com.zavadimka.AttachmentsTest","testAnnotatedAttachments","Проверка прикрепления скриншота",""
