@@ -15,6 +15,9 @@ jobs:
         with:
           distribution: 'zulu'
           java-version: '17'
+      # выдаём права на выполнение gradlew
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
       # запускаем тесты
       - run: ./gradlew clean test
 
