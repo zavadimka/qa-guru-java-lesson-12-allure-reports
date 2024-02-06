@@ -18,6 +18,9 @@ jobs:
       # выдаём права на выполнение gradlew
       - name: Make gradlew executable
         run: chmod +x ./gradlew
+      # подключаем браузер
+      - name: Start selenoid
+        uses: Xotabu4/selenoid-github-action@v2
       # запускаем тесты
-      - run: ./gradlew clean test
+      - run: ./gradlew clean test -Dselenide.remote=http://localhost:4444/wd/hub
 
